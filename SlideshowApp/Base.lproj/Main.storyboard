@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,181 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YQB-Z4-gCc">
+                                <rect key="frame" x="65" y="268" width="245" height="131"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="YQB-Z4-gCc" secondAttribute="height" multiplier="15:8" id="IAs-3W-kz5"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h8U-fM-vVs">
+                                <rect key="frame" x="142" y="544" width="90" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="LfJ-5B-Y2T"/>
+                                    <constraint firstAttribute="width" constant="90" id="oBS-Fe-GoN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="再生/停止"/>
+                                <connections>
+                                    <action selector="slideShow:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B1A-dl-5Jv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gG-0h-gOV">
+                                <rect key="frame" x="20" y="479" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="UUS-e3-WJn"/>
+                                    <constraint firstAttribute="height" constant="30" id="gqc-BB-x0e"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="前の画像"/>
+                                <connections>
+                                    <action selector="toPrev:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9j4-NT-bzJ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewB-6x-pOC">
+                                <rect key="frame" x="15" y="188" width="345" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="ejS-qI-7V9"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzc-11-Mgt">
+                                <rect key="frame" x="275" y="479" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="fUn-qo-51s"/>
+                                    <constraint firstAttribute="height" constant="30" id="lXF-jt-AxQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="次の画像"/>
+                                <connections>
+                                    <action selector="toNext:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DPR-hg-CRk"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="世界遺産" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxo-Ug-hMR">
+                                <rect key="frame" x="88" y="108" width="200" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="p6w-EO-1Dw"/>
+                                    <constraint firstAttribute="height" constant="50" id="tR3-ix-d5K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
+                                <color key="textColor" red="0.99185103178024292" green="0.59720605611801147" blue="0.017976498231291771" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="2Ow-j1-2Aw"/>
+                            <constraint firstItem="5gG-0h-gOV" firstAttribute="top" secondItem="YQB-Z4-gCc" secondAttribute="bottom" constant="80" id="4Kw-XJ-rdS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ewB-6x-pOC" secondAttribute="trailing" constant="15" id="BYC-Sa-SED"/>
+                            <constraint firstItem="Vzc-11-Mgt" firstAttribute="top" secondItem="YQB-Z4-gCc" secondAttribute="bottom" constant="80" id="H8G-g9-vRl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Vzc-11-Mgt" secondAttribute="trailing" constant="20" id="LYj-gu-HhW"/>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="MM2-WX-ZbK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="YQB-Z4-gCc" secondAttribute="trailing" constant="65" id="Mf9-Xp-PGK"/>
+                            <constraint firstItem="5gG-0h-gOV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="MmV-Ek-bg8"/>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="top" secondItem="ewB-6x-pOC" secondAttribute="bottom" constant="30" id="N0u-j2-d0C"/>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PPO-yn-OF0"/>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="top" secondItem="Pxo-Ug-hMR" secondAttribute="bottom" constant="110" id="Tr6-li-kYM"/>
+                            <constraint firstItem="ewB-6x-pOC" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="cpV-nF-pK3"/>
+                            <constraint firstItem="h8U-fM-vVs" firstAttribute="top" secondItem="YQB-Z4-gCc" secondAttribute="bottom" constant="145" id="hYG-lU-kca"/>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="centerX" secondItem="ewB-6x-pOC" secondAttribute="centerX" id="hq0-Oq-bnC"/>
+                            <constraint firstItem="h8U-fM-vVs" firstAttribute="centerX" secondItem="YQB-Z4-gCc" secondAttribute="centerX" id="pxh-ie-0Z2"/>
+                            <constraint firstItem="YQB-Z4-gCc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qeD-6u-Cj4"/>
+                            <constraint firstItem="Pxo-Ug-hMR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qms-Ee-ePP"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="WHImageView" destination="YQB-Z4-gCc" id="5dN-1o-ZiN"/>
+                        <outlet property="WHLabel" destination="ewB-6x-pOC" id="eJa-LD-bKy"/>
+                        <outlet property="slideShowLabel" destination="h8U-fM-vVs" id="reh-hT-CmU"/>
+                        <segue destination="IGK-D4-K1i" kind="show" identifier="toPictureViewController" id="mmI-FB-42r"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="245.59999999999999" y="132.68365817091455"/>
+        </scene>
+        <!--Picture View Controller-->
+        <scene sceneID="RCw-m6-zhC">
+            <objects>
+                <viewController id="IGK-D4-K1i" customClass="pictureViewController" customModule="SlideshowApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tRb-vB-9gf">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvX-Dc-fng">
+                                <rect key="frame" x="147.5" y="546" width="80" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="nfv-uv-fRQ"/>
+                                    <constraint firstAttribute="height" constant="30" id="ry6-ps-aUD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
+                                <state key="normal" title="戻る"/>
+                                <connections>
+                                    <segue destination="f30-Pv-j0W" kind="unwind" unwindAction="unwind:" id="cb0-5P-dLC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfq-qf-9kS">
+                                <rect key="frame" x="15" y="351" width="345" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Mv9-VC-MKa"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aZ-ME-Mm7">
+                                <rect key="frame" x="15" y="421" width="345" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="JMD-kb-HNN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFV-Bg-FBM" customClass="worldHeritage1">
+                                <rect key="frame" x="0.0" y="70" width="375" height="246"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UFV-Bg-FBM" secondAttribute="height" multiplier="125:82" id="SMz-fI-nuh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ZTD-C7-puW" firstAttribute="trailing" secondItem="4aZ-ME-Mm7" secondAttribute="trailing" constant="15" id="7Eb-22-aYK"/>
+                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" constant="15" id="8Tu-5J-zRI"/>
+                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="IFL-h0-HLL"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="trailing" secondItem="ZTD-C7-puW" secondAttribute="trailing" id="LBe-PA-X0W"/>
+                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="RIN-2e-WtI"/>
+                            <constraint firstItem="ZTD-C7-puW" firstAttribute="trailing" secondItem="Gfq-qf-9kS" secondAttribute="trailing" constant="15" id="Rpf-oR-hby"/>
+                            <constraint firstItem="JvX-Dc-fng" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="WCQ-hc-Quh"/>
+                            <constraint firstItem="JvX-Dc-fng" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="230" id="WKi-pC-EJ5"/>
+                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" constant="15" id="WbN-YF-6nU"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" id="ac0-l1-PwA"/>
+                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="105" id="awc-HZ-M6d"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="centerX" secondItem="tRb-vB-9gf" secondAttribute="centerX" id="jIH-6N-XqQ"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="top" secondItem="ZTD-C7-puW" secondAttribute="top" constant="50" id="mYV-f0-4TA"/>
+                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="35" id="v8t-Bb-kLt"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="top" secondItem="ZTD-C7-puW" secondAttribute="top" constant="50" id="wOo-BV-YY3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ZTD-C7-puW"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentsLabel" destination="4aZ-ME-Mm7" id="ypv-cI-DU5"/>
+                        <outlet property="expandedImageView" destination="UFV-Bg-FBM" id="EDl-9I-Tgx"/>
+                        <outlet property="expandedTitleLabel" destination="Gfq-qf-9kS" id="Ylu-2I-UUx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rU9-yU-Tq5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="f30-Pv-j0W" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1004" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
