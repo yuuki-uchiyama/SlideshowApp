@@ -29,7 +29,6 @@
                                 <rect key="frame" x="142" y="544" width="90" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LfJ-5B-Y2T"/>
-                                    <constraint firstAttribute="width" constant="90" id="oBS-Fe-GoN"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
                                 <state key="normal" title="再生/停止"/>
@@ -40,7 +39,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gG-0h-gOV">
                                 <rect key="frame" x="20" y="479" width="80" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="UUS-e3-WJn"/>
                                     <constraint firstAttribute="height" constant="30" id="gqc-BB-x0e"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
@@ -61,7 +59,6 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vzc-11-Mgt">
                                 <rect key="frame" x="275" y="479" width="80" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="fUn-qo-51s"/>
                                     <constraint firstAttribute="height" constant="30" id="lXF-jt-AxQ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
@@ -73,7 +70,6 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="世界遺産" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pxo-Ug-hMR">
                                 <rect key="frame" x="88" y="108" width="200" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="p6w-EO-1Dw"/>
                                     <constraint firstAttribute="height" constant="50" id="tR3-ix-d5K"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="50"/>
@@ -123,9 +119,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JvX-Dc-fng">
-                                <rect key="frame" x="147.5" y="546" width="80" height="30"/>
+                                <rect key="frame" x="167.5" y="547" width="40" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="80" id="nfv-uv-fRQ"/>
                                     <constraint firstAttribute="height" constant="30" id="ry6-ps-aUD"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="HiraMaruProN-W4" family="Hiragino Maru Gothic ProN" pointSize="20"/>
@@ -135,7 +130,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gfq-qf-9kS">
-                                <rect key="frame" x="15" y="351" width="345" height="40"/>
+                                <rect key="frame" x="15" y="372" width="345" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="Mv9-VC-MKa"/>
                                 </constraints>
@@ -144,7 +139,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="説明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4aZ-ME-Mm7">
-                                <rect key="frame" x="15" y="421" width="345" height="80"/>
+                                <rect key="frame" x="15" y="422" width="345" height="80"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="80" id="JMD-kb-HNN"/>
                                 </constraints>
@@ -153,29 +148,28 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UFV-Bg-FBM" customClass="worldHeritage1">
-                                <rect key="frame" x="0.0" y="70" width="375" height="246"/>
+                                <rect key="frame" x="0.0" y="110" width="375" height="247"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" secondItem="UFV-Bg-FBM" secondAttribute="height" multiplier="125:82" id="SMz-fI-nuh"/>
+                                    <constraint firstAttribute="width" secondItem="UFV-Bg-FBM" secondAttribute="height" multiplier="375:247" id="8bl-dV-xaP"/>
                                 </constraints>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZTD-C7-puW" firstAttribute="trailing" secondItem="4aZ-ME-Mm7" secondAttribute="trailing" constant="15" id="7Eb-22-aYK"/>
-                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" constant="15" id="8Tu-5J-zRI"/>
-                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="IFL-h0-HLL"/>
-                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="trailing" secondItem="ZTD-C7-puW" secondAttribute="trailing" id="LBe-PA-X0W"/>
-                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="RIN-2e-WtI"/>
-                            <constraint firstItem="ZTD-C7-puW" firstAttribute="trailing" secondItem="Gfq-qf-9kS" secondAttribute="trailing" constant="15" id="Rpf-oR-hby"/>
-                            <constraint firstItem="JvX-Dc-fng" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="WCQ-hc-Quh"/>
-                            <constraint firstItem="JvX-Dc-fng" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="230" id="WKi-pC-EJ5"/>
-                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" constant="15" id="WbN-YF-6nU"/>
-                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" id="ac0-l1-PwA"/>
-                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="105" id="awc-HZ-M6d"/>
-                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="centerX" secondItem="tRb-vB-9gf" secondAttribute="centerX" id="jIH-6N-XqQ"/>
-                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="top" secondItem="ZTD-C7-puW" secondAttribute="top" constant="50" id="mYV-f0-4TA"/>
-                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="35" id="v8t-Bb-kLt"/>
-                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="top" secondItem="ZTD-C7-puW" secondAttribute="top" constant="50" id="wOo-BV-YY3"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" id="0D3-er-EaV"/>
+                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="0vp-Mf-dsJ"/>
+                            <constraint firstItem="JvX-Dc-fng" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="1t4-T5-0oZ"/>
+                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" constant="15" id="5tt-zK-x4t"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="centerX" secondItem="tRb-vB-9gf" secondAttribute="centerX" id="DRr-fq-i3M"/>
+                            <constraint firstItem="ZTD-C7-puW" firstAttribute="trailing" secondItem="4aZ-ME-Mm7" secondAttribute="trailing" constant="15" id="EMd-Jq-yPc"/>
+                            <constraint firstItem="JvX-Dc-fng" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="190" id="JlS-d5-TxG"/>
+                            <constraint firstItem="4aZ-ME-Mm7" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="65" id="NlL-qv-u8e"/>
+                            <constraint firstItem="ZTD-C7-puW" firstAttribute="trailing" secondItem="Gfq-qf-9kS" secondAttribute="trailing" constant="15" id="ZJM-7s-8XP"/>
+                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="top" secondItem="UFV-Bg-FBM" secondAttribute="bottom" constant="15" id="ehR-qL-jwq"/>
+                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="leading" secondItem="ZTD-C7-puW" secondAttribute="leading" constant="15" id="gGs-GZ-UQi"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="centerY" secondItem="tRb-vB-9gf" secondAttribute="centerY" constant="-100" id="gSC-LA-Vyn"/>
+                            <constraint firstItem="Gfq-qf-9kS" firstAttribute="centerX" secondItem="UFV-Bg-FBM" secondAttribute="centerX" id="iWy-dg-KTa"/>
+                            <constraint firstItem="UFV-Bg-FBM" firstAttribute="trailing" secondItem="ZTD-C7-puW" secondAttribute="trailing" id="vbA-j3-yCx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ZTD-C7-puW"/>
                     </view>
