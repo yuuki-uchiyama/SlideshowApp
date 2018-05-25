@@ -127,6 +127,8 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate{
                 self.timer.invalidate()
                 slideShowLabel.setTitle("再生", for: .normal)
                 timerCount = 0
+                toPrevButton.isEnabled = true
+                toNextButton.isEnabled = true
             }
         }
          //UIImageViewをタップした時の機能
