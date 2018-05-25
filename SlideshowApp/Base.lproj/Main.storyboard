@@ -103,6 +103,8 @@
                         <outlet property="WHImageView" destination="YQB-Z4-gCc" id="5dN-1o-ZiN"/>
                         <outlet property="WHLabel" destination="ewB-6x-pOC" id="eJa-LD-bKy"/>
                         <outlet property="slideShowLabel" destination="h8U-fM-vVs" id="reh-hT-CmU"/>
+                        <outlet property="toNextButton" destination="Vzc-11-Mgt" id="g8g-QW-6IN"/>
+                        <outlet property="toPrevButton" destination="5gG-0h-gOV" id="KrV-o0-5vZ"/>
                         <segue destination="IGK-D4-K1i" kind="show" identifier="toPictureViewController" id="mmI-FB-42r"/>
                     </connections>
                 </viewController>

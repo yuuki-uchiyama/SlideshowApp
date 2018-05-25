@@ -13,6 +13,11 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate{
     @IBOutlet var WHImageView: UIImageView! //世界遺産画像
     @IBOutlet var WHLabel: UILabel! //世界遺産名
     @IBOutlet var slideShowLabel: UIButton! //再生・停止のラベル
+    @IBOutlet var toPrevButton: UIButton! //「前の画像」のボタン
+    @IBOutlet var toNextButton: UIButton! //「次の画像」のボタン
+    
+    
+  
     
     let WHImageViewArray = ["worldHeritage1.jpg", "worldHeritage2.jpg", "worldHeritage3.jpg"]
      //世界遺産画像の配列
@@ -36,43 +41,20 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate{
     }
     
     @IBAction func toPrev(_ sender: Any) {
-        if timerCount == 0{
-            if viewNo == 0 {
+        if viewNo == 0 {
             viewNo = 2
             displayImage()
             displayLabel()
-            }
-            else {
+        }
+        else {
             viewNo -= 1
             displayImage()
             displayLabel()
-            }
         }
          //「前の画像」ボタンを押した時の機能
     }
     
     @IBAction func toNext(_ sender: Any) {
-        if timerCount == 0{
-            if viewNo == 2 {
-                viewNo = 0
-                displayImage()
-                displayLabel()
-            }
-            else{
-                viewNo += 1
-                displayImage()
-                displayLabel()
-            }
-        }
-         //「次の画像」ボタンを押した時の機能
-    }
-    
-    var timer: Timer!
-    var timer_sec = 0
-    var timerCount = 0
-     //スライドショーの為のtimerの変数など
-    
-    @objc func slideShowMove(){
         if viewNo == 2 {
             viewNo = 0
             displayImage()
@@ -83,20 +65,28 @@ class ViewController: UIViewController , UIGestureRecognizerDelegate{
             displayImage()
             displayLabel()
         }
-         //スライドショーを動かす為の機能
+         //「次の画像」ボタンを押した時の機能
     }
     
+    var timer: Timer!
+    var timer_sec = 0
+    var timerCount = 0
+     //スライドショーの為のtimerの変数など
     
     @IBAction func slideShow(_ sender: Any) {
         if timerCount == 1 {
            self.timer.invalidate()
             slideShowLabel.setTitle("再生", for: .normal)
             timerCount = 0
+            toPrevButton.isEnabled = true
+            toNextButton.isEnabled = true
         }
         else{
-            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(slideShowMove), userInfo: nil, repeats: true)
+            self.timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(toNext(_:)), userInfo: nil, repeats: true)
             slideShowLabel.setTitle("停止", for: .normal)
             timerCount = 1
+            toPrevButton.isEnabled = false
+            toNextButton.isEnabled = false
         }
          //再生・停止ボタンを押した時の機能
          //タイマー起動およびボタンの表示名の変更
